@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Material Modal Drawer Example</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <aside class="mdc-drawer mdc-drawer--modal">
+        <div class="mdc-drawer__content">
+            <nav class="mdc-list">
+                <a class="mdc-list-item mdc-list-item--activated" href="http://localhost:5500/Login%20form.html" aria-current="page">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true"></i>
+                    <span class="mdc-list-item__text">SIGN UP</span><br>
+
+                </a>
+                <a>
+                    <a class="mdc-list-item mdc-list-item--activated" href="https://accounts.google.com/signin/v2/usernamerecovery?passive=1209600&continue=https%3A%2F%2Faccounts.google.com%2Fb%2F0%2FAddMailService&followup=https%3A%2F%2Faccounts.google.com%2Fb%2F0%2FAddMailService&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+                        aria-current="page">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true"></i>
+                        <span class="mdc-list-item__text">LOG IN</span>
+                    </a>
+                    <aside class="mdc-drawer">
+                        <div class="mdc-drawer__header">
+                        </div>
+                        <div class="mdc-drawer__content">
+                            <nav class="mdc-list">
+                                <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page">
+                                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+                                    <span class="mdc-list-item__text">Inbox</span>
+                                </a>
+                                <a class="mdc-list-item" href="#">
+                                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+                                    <span class="mdc-list-item__text">Statement</span>
+                                </a>
+                                <a class="mdc-list-item" href="#">
+                                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+                                    <span class="mdc-list-item__text">Drafts</span>
+                                </a>
+                            </nav>
+                        </div>
+                    </aside>
+                    <hr class="mdc-list-divider">
+            </nav>
+        </div>
+    </aside>
+    </nav>
+    </div>
+    </aside>
+
+    <div class="mdc-drawer-scrim"></div>
+    <div class="mdc-drawer-app-content">
+        <header class="mdc-top-app-bar mdc-top-app-bar--scroll">
+            <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                    <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
+                    <span class="mdc-top-app-bar__title">TOO BIG...</span>
+                </section>
+            </div>
+        </header>
+        <main class="mdc-top-app-bar--fixed-adjust">
+            Too BiG (or web-based email) is any email client implemented as a web application running on a web server. Examples of webmail software are Roundcube and SquirrelMail.Many webmail providers also offer email access by a desktop email client using standard
+            email protocols, while many internet service providers provide a webmail client as part of the email service included in their internet service package. As with any web application, webmail's main advantage over the use of a desktop email
+            client is the ability to send and receive email anywhere from a web browser. Its main disadvantage is the need to be connected to the Internet while using it.
+        </main>
+    </div>
+
+
+    <div class="container">
+        <img src="ankit.jpeg" class="responsive">
+        <button class="btn">My Account</button>
+    </div>
+
+    <button onclick="logOut()">logOut</button>
+
+    <script src="firebase.js"></script>
+    <script src="main.js"></script>
+
+
+
+</body>
+<script>
+    const drawer = mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+    const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'));
+    topAppBar.listen('MDCTopAppBar:nav', () => {
+        drawer.open = !drawer.open;
+    });
+</script>
+</head>
+
+</html>
